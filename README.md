@@ -84,21 +84,4 @@ Where</code></pre>
 
 Congratulations ! there is no step 4 and validation is ready to go !
 
-Though,it isn't compulsary, but before you start, We highly recommend you to modify few of the variables inside UI validator JS file. They are
-<div class="highlight">
-<pre><code class="xml">
-		
-</code></pre>
-<ul>
-<ul>
-	<li><span style="color: red; text-decoration: underline;">MODIFY THE MESSAGE BASED ON DATA TYPE</span> function Message(len) { this.NUMERIC = '[Numeric error]'; this.MIN = '[Minimum length of ' + len + '.]'; this.STRING = '[Missing value.]'; this.EMAIL = '[Please enter valid email address.]'; this.CHECK = '[checkbox error]'; this.SELECT = '[Select box error]'; this.DATE = '[Date Error]'; }</li>
-</ul>
-</ul>
-&nbsp;
-
-</div></li>
-	<li><span style="color: red; text-decoration: underline;">MODIFY THE CLASS NAME FOR VALID/INVALID RESULTS. </span> function ErrorClasses() { this.CUSTOMERROR_TEXT = "ui-state-error"; this./0 = "custom_div"; this.CUSTOMERROR = "custom_error"; this.CUSTOMOK = "alert alert-success"; }</li>
-	<li><span style="color: red; text-decoration: underline;">IMAGE SOURCE FOR LOADING EFFECT. </span> function LOADING() { this.SRC = "../img/loading.gif"; this.MSG = "Loading.."; }</li>
-	<li><span style="color: red; text-decoration: underline;">MODIFY THE DATE FORMAT AS REQUIRED. </span> function Misc() { this.DATE = "MM/DD/YYYY"; // Month = MM,mm Day = DD,dd Year: yyyy, YYYY, YY, yy }</li>
-</ul>
-</div>
+Though,it isn't compulsary, but before you start, We highly recommend you to modify few of the variables inside UI validator JS file before you continue.
