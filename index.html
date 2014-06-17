@@ -9,9 +9,9 @@
 <!-- CDN -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <link rel="stylesheet" media="screen" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<script type="text/javascript" src="http://prasant.com.np/wp-content/themes/Custom_Theme_Prashant/js/prashant-ui-validator-1.7.js"></script>
 <!-- END OF CDN -->
 
-<script type="text/javascript" src="js/prashant-ui-validator-1.6.js"></script>
 
 <!--
 <script type="text/javascript" src="jquery-1.7.2.min.js"></script> 
@@ -25,8 +25,9 @@
 <body>
     <div class="container">
       <div class="page-header">
-        <h1>UI Validator examples</h1>
-        <p class="lead">Basic examples to get you familiar with UI validator.</p>
+        <h1>Prashant-UI-Validator</h1>
+        <p class="lead">Prashant-UI-Validator is a rich jquery plugin that incorporates the power of bootstrap and make validation easier !</p>
+		<p>It supports a wide range of validation and is available in <a href="https://github.com/prashantchalise/Prashant-UI-Validator">Github</a>.</p>
       </div>
 
 
@@ -45,8 +46,9 @@
 &lt;!-- CDN --&gt;
 &lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&gt;&lt;/script&gt;
 &lt;link rel="stylesheet" media="screen" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"&gt;
+&lt;script type="text/javascript" src="http://prasant.com.np/wp-content/themes/Custom_Theme_Prashant/js/prashant-ui-validator-1.7.js"&gt;&lt;/script&gt;
 &lt;!-- END OF CDN --&gt;
-&lt;script type="text/javascript" src="js/prashant-ui-validator-1.4.js"&gt;&lt;/script&gt;
+
 	  </code>
 	  </pre>
 	  </div>
@@ -217,10 +219,7 @@ alert('Everything seems all right!!');return false;
 </form>
 <br/>
 <hr/>
-<h2>Sample Code</h2>
-<hr/>
-<h3><b><i>Javascript</i></b></h3>
-<div class="highlight"><pre><code class="html">
+<h2>Confused !! Follow the easy steps below to see UI-Validator working .</h2>
 <script type="text/javascript">
 $(document).ready(function(){
 x.Validate($('#btnSubmit'),'formGroup',$('#divMsg'),true,"CallMe_AfterValidCall();");
@@ -231,11 +230,80 @@ alert('Everything seems all right!!');return false;
 }
 </script>
 
-</code></pre></div>
-
 <hr/>
-<h3><b><i>HTML</i></b></h3>
+<h3><b><i>Sample Code</i></b></h3>
 <div class="highlight"><pre><code class="html">
+
+&lt;!DOCTYPE&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Jquery UI Validator :: By Prashant Chalise :: &lt;/title&gt;
+&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" media="screen" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"&gt;
+&lt;script type="text/javascript" src="http://prasant.com.np/wp-content/themes/Custom_Theme_Prashant/js/prashant-ui-validator-1.7.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+$(document).ready(function () {
+x.Validate($('#btnSubmit'), 'formGroup', $('#divMsg'), true, "CallMe_AfterValidCall();");
+});
+
+function CallMe_AfterValidCall() {
+alert('Everything seems all right!!'); return false;
+}
+&lt;/script&gt;
+
+
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-xs-12 col-sm-6 col-lg-8"&gt;
+
+&lt;form role="form" group='formGroup'&gt;
+&lt;div id="divMsg"&gt;&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label for="exampleInputEmail1"&gt;Email address&lt;/label&gt;
+&lt;input type="text" class="form-control" id="exampleInputEmail1" req='{"R":"EMAIL","M":"Email is required."}' placeholder="Enter email"&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label for="exampleInputPassword1"&gt;Password With minimum 4 Characters &lt;/label&gt;
+&lt;input type="password" class="form-control" id="exampleInputPassword1" req='{"R":"MIN[4]","M":"Password is required.(minimum {len} Characters)"}' placeholder="Password (minimum 4 Characters)"&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label for="ddlBatch"&gt;Select Batch&lt;/label&gt;
+&lt;select id="ddlBatch" class='form-control' req=''&gt;
+&lt;option value="-1"&gt;--Select Batch --&lt;/option&gt;
+&lt;option value="1"&gt;2013&lt;/option&gt;
+&lt;option value="2"&gt;2014&lt;/option&gt;
+&lt;option value="3"&gt;2015&lt;/option&gt;
+&lt;option value="4"&gt;2016&lt;/option&gt;
+&lt;/select&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label for="txtDateofBirth"&gt;DOB:&lt;/label&gt;
+&lt;input type="text" class="form-control" id="txtDateofBirth" placeholder="Enter Date of Birth" req='{"R":"DATE","M":"Invalid date value."}'&gt;
+&lt;/div&gt;
+
+&lt;div class="form-group"&gt;
+&lt;label for="txtRollNumber"&gt;Roll Number:&lt;/label&gt;
+&lt;input type="text" class="form-control" id="txtRollNumber" placeholder="Enter Roll number" req='{"R":"INT","M":"Provide Integer value only."}'&gt;
+&lt;/div&gt;
+
+&lt;div class="form-group"&gt;
+&lt;label for="txtScoreInPercentage"&gt;Score in %&lt;/label&gt;
+&lt;input type="text" class="form-control" id="txtScoreInPercentage" placeholder="Enter Your score in Percent" req='{"R":"NUMBER","M":"Provide Numeric value only."}'&gt;
+&lt;/div&gt;
+
+
+&lt;button type="submit" class="btn btn-default" id="btnSubmit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 
 </code></pre></div>
 
@@ -245,12 +313,6 @@ alert('Everything seems all right!!');return false;
 		</div>
         <div class="col-xs-6 col-lg-4">.col-xs-6 .col-lg-4</div>
       </div>
-      <div class="row">
-        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-      </div>
-
     </div> <!-- /container -->
 
 </body>
